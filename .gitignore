@@ -3,3 +3,6 @@ build/
 
 # Compiled application binaries
 app*
+
+# Local model files
+models/*
