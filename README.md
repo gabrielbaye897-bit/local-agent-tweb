@@ -10,9 +10,23 @@ A small C client for sending chat requests to a local Ollama server over HTTP.
 
 ## Requirements
 
+### Current backend: Ollama
+
 - A running [Ollama](https://ollama.com/) server at `http://localhost:11434`
 - A model available to Ollama, configured in `API/inference/ollama.c`
 - Development packages for `libcurl` and `cJSON` when building from source
+
+### Planned backend options
+
+The inference layer is intended to support more than a local Ollama server:
+
+- Your own AI API, provided through a compatible HTTP endpoint
+- A hosted model from [Hugging Face](https://huggingface.co/models)
+- A locally downloaded Hugging Face model, when a suitable local inference
+  runtime is added
+
+At the moment, the example client is wired to Ollama only. These alternatives
+will require an adapter or endpoint configuration in the inference layer.
 
 ## Usage
 
